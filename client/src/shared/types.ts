@@ -3,4 +3,6 @@ export interface user {
   first?: string;
   last?: string;
   email?: string;
+  gender?: string;
+  bio?: string;
 }

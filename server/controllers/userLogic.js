@@ -20,7 +20,7 @@ exports.getUser = async (req, res) => {
 };
 
 exports.putUser = async (req, res) => {
-  const allowedParameters = ['first', 'last'];
+  const allowedParameters = ['first', 'last', 'gender', 'bio'];
   const exists = await User.findById(req.user._id);
   // User exists, check for body of request to make update
   if (exists) {

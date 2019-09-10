@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Segment, Header, Icon, Form, Button} from 'semantic-ui-react';
-import axios from 'axios';
 import { Link, Redirect } from 'react-router-dom';
+import axios from 'axios';
 
 type user = {
   _id?: string,

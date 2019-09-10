@@ -21,7 +21,9 @@ const UserSchema = new Schema({
   last: {
     type: String,
     required: false
-  }
+  },
+  gender: String,
+  bio: String
 });
 
 UserSchema.pre('save', async function(next) {

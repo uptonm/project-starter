@@ -34,6 +34,8 @@ const SignUp = (props: any) => {
     if (data.token) {
       localStorage.setItem('token', data.token);
       setNavigate(true);
+      props.setToken(data.token);
+      props.fetchUser();
     }
 
   };
@@ -68,7 +70,7 @@ const SignUp = (props: any) => {
           <input type="password" placeholder="Password" value={pass} onChange={handlePass} />
         </Form.Field>
         <Button primary onClick={() => signup({email: email, password: pass})}>Sign Up</Button>
-        <Link to="/log-in">Have an account? Sign in!</Link>
+        <Link to="/log-in">Have an account? Log in!</Link>
       </Form>
     </Segment>
   );
